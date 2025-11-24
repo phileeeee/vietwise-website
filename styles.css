@@ -88,7 +88,7 @@ body {
 }
 
 .hero-title {
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -149,47 +149,71 @@ body {
 
 .hero-image {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .phone-mockup {
     background-color: #fff;
-    border-radius: 24px;
-    padding: 60px 40px;
+    border-radius: 32px;
+    padding: 32px;
     text-align: center;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    display: inline-block;
 }
 
 .qr-placeholder {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 20px;
-    background-color: #e0e0e0;
+    width: 320px;
+    background-color: #E8E6E1;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    border-radius: 24px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.qr-box {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+    display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    color: #999;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.qr-box p {
+    color: #9CA3AF;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
 }
 
 .scan-text {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
-    color: #333;
+    color: #2C2C2C;
+    margin: 0;
+    text-align: center;
 }
 
 .badge {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #000;
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
+    top: -16px;
+    right: -16px;
+    background-color: #BDEEFF;
+    color: #2C2C2C;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
 }
 
 /* Features Section */
@@ -199,7 +223,7 @@ body {
 }
 
 .section-title {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 16px;
@@ -461,10 +485,30 @@ body {
 @media (max-width: 768px) {
     .hero-content {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .hero-title {
-        font-size: 40px;
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        width: auto;
+        min-width: 200px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
     }
 
     .features-grid {
@@ -473,6 +517,35 @@ body {
 
     .pricing-grid {
         grid-template-columns: 1fr;
+    }
+
+    .phone-mockup {
+        padding: 24px;
+    }
+
+    .qr-placeholder {
+        width: 260px;
+        padding: 24px;
+    }
+
+    .qr-box {
+        margin-bottom: 20px;
+        border-radius: 16px;
+    }
+
+    .qr-box p {
+        font-size: 12px;
+    }
+
+    .scan-text {
+        font-size: 14px;
+    }
+
+    .badge {
+        top: -12px;
+        right: -12px;
+        font-size: 13px;
+        padding: 8px 16px;
     }
 
     .footer-content {
@@ -499,8 +572,15 @@ body {
     }
 
     .store-button {
-        width: 100%;
-        max-width: 300px;
+        width: auto;
+        min-width: 200px;
         justify-content: center;
+    }
+}
+
+/* Tablet breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-title {
+        font-size: 60px;
     }
 }
