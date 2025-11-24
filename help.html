@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & FAQ - VietWise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #F0EFEB;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid #E0E0E0;
+            border-radius: 25px;
+            font-size: 1em;
+            background-color: #FFF;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #000;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #000;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
+        }
+
+        .faq-item {
+            background: #FFF;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #F5F5F5;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5em;
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 20px 20px 20px;
+            color: #666;
+        }
+
+        .faq-answer-content p {
+            margin-bottom: 10px;
+        }
+
+        .faq-answer-content ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .faq-answer-content li {
+            margin-bottom: 8px;
+        }
+
+        .faq-answer-content strong {
+            color: #000;
+        }
+
+        .contact-section {
+            background: #000;
+            color: #FFF;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p {
+            margin-bottom: 20px;
+            color: #CCC;
+        }
+
+        .contact-section a {
+            color: #FFF;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #E0E0E0;
+            color: #666;
+        }
+
+        footer a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .category h2 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 30px 15px;
+            }
+
+            .contact-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Help & FAQ</h1>
+            <p class="subtitle">Everything you need to know about VietWise</p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for answers...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </header>
+
+        <!-- Getting Started -->
+        <div class="category">
+            <h2>Getting Started</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What is VietWise?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise is a mobile app that brings Vietnamese wisdom, proverbs, and sayings to your fingertips. Each wisdom entry includes:</p>
+                        <ul>
+                            <li>Original Vietnamese text</li>
+                            <li>English translation</li>
+                            <li>Cultural meaning and context</li>
+                            <li>Audio pronunciation in Vietnamese</li>
+                            <li>Category tags for easy exploration</li>
+                        </ul>
+                        <p>Our mission is to help you connect with Vietnamese culture, whether you're learning the language, seeking daily inspiration, or rediscovering your roots.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I get started?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>Step 1:</strong> Download VietWise from the App Store</p>
+                        <p><strong>Step 2:</strong> Open the app and complete the quick onboarding (select your motivations for using VietWise)</p>
+                        <p><strong>Step 3:</strong> Start exploring! Swipe through wisdoms on the home screen</p>
+                        <p><strong>Step 4:</strong> Tap the play button (or slow play button) to hear Vietnamese pronunciation with professional native speakers</p>
+                        <p><strong>Step 5:</strong> Like, save to collections, or journal your thoughts about wisdoms that resonate with you</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need an account to use VietWise?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>No, you can use VietWise without an account. All your data (likes, collections, journal entries) is stored locally on your device.</p>
+                        <p>However, creating an account allows you to:</p>
+                        <ul>
+                            <li>Sync your data across multiple devices</li>
+                            <li>Back up your collections and journal entries</li>
+                            <li>Access your data if you switch phones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Free vs Premium -->
+        <div class="category">
+            <h2>Free vs Premium</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What's included in the free version?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>The free version of VietWise includes:</p>
+                        <ul>
+                            <li>Access to 10 wisdom entries per session</li>
+                            <li>Audio pronunciation for all wisdoms</li>
+                            <li>Ability to like and save wisdoms</li>
+                            <li>Create and organize collections</li>
+                            <li>Journal your thoughts and reflections</li>
+                            <li>Personalized wisdom feed based on your interests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What does VietWise Pro include?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise Pro unlocks the full experience:</p>
+                        <ul>
+                            <li><strong>Unlimited wisdom access</strong> - No session limits</li>
+                            <li><strong>Full history tracking</strong> - See all wisdoms you've viewed</li>
+                            <li><strong>Complete analytics & insights</strong> - Track your learning patterns, most active times, and engagement duration</li>
+                            <li><strong>Advanced data management</strong> - Clear Streak and Clear All Data features for complete control</li>
+                            <li><strong>No ads</strong> - Uninterrupted wisdom experience</li>
+                            <li><strong>Early access</strong> - Be the first to try new features</li>
+                        </ul>
+                        <p>Pro users are more likely to turn reflection into real change.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How much does VietWise Pro cost?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise Pro is available with two subscription options:</p>
+                        <ul>
+                            <li><strong>Monthly:</strong> $14.99/month</li>
+                            <li><strong>Yearly:</strong> $39.99/year (Best Value - save over 75%!)</li>
+                        </ul>
+                        <p>All subscriptions are managed through the App Store and can be cancelled anytime.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I cancel my subscription anytime?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes! You can cancel your VietWise Pro subscription at any time through your App Store account settings.</p>
+                        <p><strong>To cancel on iPhone/iPad:</strong></p>
+                        <ul>
+                            <li>Open Settings > [Your Name] > Subscriptions</li>
+                            <li>Tap VietWise</li>
+                            <li>Tap "Cancel Subscription"</li>
+                        </ul>
+                        <p>You'll continue to have Pro access until the end of your current billing period.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features & Usage -->
+        <div class="category">
+            <h2>Features & Usage</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the personalized feed work?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise creates a personalized wisdom feed based on your motivations selected during onboarding.</p>
+                        <p>Our algorithm uses a 70/30 split:</p>
+                        <ul>
+                            <li><strong>70% personalized:</strong> Wisdoms matching your interests (e.g., personal growth, family, career)</li>
+                            <li><strong>30% discovery:</strong> Wisdoms outside your preferences to broaden your perspective</li>
+                        </ul>
+                        <p>This ensures you get relevant content while still discovering new wisdom.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are Collections and how do I use them?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Collections let you organize wisdoms into custom groups that matter to you.</p>
+                        <p><strong>To create a collection:</strong></p>
+                        <ul>
+                            <li>Tap the bookmark icon on any wisdom</li>
+                            <li>Tap "Add new" to create a collection</li>
+                            <li>Give it a meaningful name (e.g., "Morning Motivation", "Family Wisdom")</li>
+                        </ul>
+                        <p><strong>To view your collections:</strong></p>
+                        <ul>
+                            <li>Go to the Library tab (bookmark icon in bottom navigation)</li>
+                            <li>Tap "Saved" to see all your collections</li>
+                            <li>Tap any collection to browse its wisdoms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the Journal feature work?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>The Journal feature lets you capture your personal reflections on any wisdom.</p>
+                        <p><strong>To add a journal entry:</strong></p>
+                        <ul>
+                            <li>Tap the journal preview box at the bottom of any wisdom card</li>
+                            <li>Write your thoughts, questions, or how the wisdom applies to your life</li>
+                            <li>Tap "Save" - your entry is automatically linked to that wisdom</li>
+                        </ul>
+                        <p><strong>To view all your journal entries:</strong></p>
+                        <ul>
+                            <li>Go to Library > Journal tab</li>
+                            <li>Browse all wisdoms you've journaled about</li>
+                            <li>Tap any wisdom to read and edit your reflection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I change the Vietnamese pronunciation accent?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes! VietWise supports three Vietnamese accents:</p>
+                        <ul>
+                            <li><strong>Southern (Saigon):</strong> Default accent</li>
+                            <li><strong>Northern (Hanoi):</strong> Northern Vietnam pronunciation</li>
+                            <li><strong>Central (Hue):</strong> Central Vietnam pronunciation</li>
+                        </ul>
+                        <p><strong>To change accent:</strong></p>
+                        <ul>
+                            <li>Go to Profile > Speech & Audio</li>
+                            <li>Tap "Accent preference"</li>
+                            <li>Select your preferred accent</li>
+                        </ul>
+                        <p>You can also choose between male and female voices in the same settings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What is Auto-play and how do I control it?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Auto-play automatically speaks the Vietnamese text when you scroll to a new wisdom.</p>
+                        <p><strong>To toggle Auto-play:</strong></p>
+                        <ul>
+                            <li>Tap the speaker icon on any wisdom card</li>
+                            <li>Volume icon = Auto-play ON (default)</li>
+                            <li>Muted icon = Auto-play OFF</li>
+                        </ul>
+                        <p>Even with Auto-play off, you can still manually play any wisdom by tapping the play button.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do the audio playback options work?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise uses professional Vietnamese voice recordings for all audio playback:</p>
+
+                        <ul>
+                            <li><strong>Play button:</strong> Hear the wisdom at normal speed</li>
+                            <li><strong>Slow play button (snail icon):</strong> Hear the wisdom at a slower pace for learning</li>
+                            <li>High-quality, natural pronunciation from native speakers</li>
+                            <li>Always matches your selected accent (Northern/Southern/Central) and voice gender preferences</li>
+                            <li>Words highlight in sync as they're spoken to help you follow along</li>
+                        </ul>
+
+                        <p>You can customize your preferred accent and voice gender in Settings > Personalise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History & Analytics (Pro) -->
+        <div class="category">
+            <h2>History & Analytics (Pro)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">What insights does VietWise Pro provide?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise Pro gives you detailed analytics about your wisdom journey:</p>
+                        <ul>
+                            <li><strong>Most active time of day:</strong> When you engage with wisdom most</li>
+                            <li><strong>Average engagement duration:</strong> How long you spend reflecting</li>
+                            <li><strong>Monthly wisdom count:</strong> Total wisdoms viewed this month</li>
+                            <li><strong>Total wisdom learned:</strong> All-time wisdom count</li>
+                            <li><strong>Engagement breakdown:</strong> Liked, saved, and journaled counts</li>
+                        </ul>
+                        <p>These insights help you understand your learning patterns and track your growth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does History tracking work?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise Pro users can access their complete history of viewed wisdoms.</p>
+                        <p><strong>Features:</strong></p>
+                        <ul>
+                            <li>See every wisdom you've ever viewed</li>
+                            <li>Sort by newest or oldest first</li>
+                            <li>Search through your history</li>
+                            <li>Re-visit wisdoms from weeks or months ago</li>
+                        </ul>
+                        <p>Free users see a preview but need Pro to unlock full history access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical & Troubleshooting -->
+        <div class="category">
+            <h2>Technical & Troubleshooting</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">The audio isn't playing. What should I do?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>If you're experiencing audio issues, try these steps:</p>
+                        <ul>
+                            <li><strong>Check volume:</strong> Ensure your device volume is turned up</li>
+                            <li><strong>Check silent mode:</strong> VietWise plays audio even in silent mode, but ensure it's not muted</li>
+                            <li><strong>Restart the app:</strong> Close and reopen VietWise</li>
+                            <li><strong>Check permissions:</strong> Ensure VietWise has audio permissions in Settings</li>
+                            <li><strong>Update the app:</strong> Make sure you have the latest version from the App Store</li>
+                        </ul>
+                        <p>If issues persist, please contact support.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">My data disappeared. How can I recover it?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p><strong>If you have an account:</strong></p>
+                        <ul>
+                            <li>Go to Profile > Account Settings</li>
+                            <li>Sign in with your account</li>
+                            <li>Your data should sync automatically</li>
+                        </ul>
+                        <p><strong>If you don't have an account:</strong></p>
+                        <p>Unfortunately, data stored locally on your device cannot be recovered if the app is deleted or the device is reset. We strongly recommend creating an account to back up your data.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I change between Light and Dark mode?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise supports three appearance options:</p>
+                        <ul>
+                            <li><strong>Auto:</strong> Follows your device system settings (default)</li>
+                            <li><strong>Light:</strong> Always use light theme</li>
+                            <li><strong>Dark:</strong> Always use dark theme</li>
+                        </ul>
+                        <p><strong>To change:</strong></p>
+                        <ul>
+                            <li>Go to Settings</li>
+                            <li>Tap "Appearance"</li>
+                            <li>Select your preferred mode</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does VietWise work offline?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes! VietWise works completely offline once you've downloaded the app.</p>
+                        <p><strong>Offline features:</strong></p>
+                        <ul>
+                            <li>Browse all wisdoms</li>
+                            <li>Listen to audio pronunciations (using device TTS)</li>
+                            <li>Like, save, and journal</li>
+                            <li>View your collections and history</li>
+                        </ul>
+                        <p><strong>Requires internet:</strong></p>
+                        <ul>
+                            <li>Account sign-in and data sync</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Which devices is VietWise compatible with?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>VietWise is currently available for:</p>
+                        <ul>
+                            <li><strong>iOS:</strong> iPhone and iPad running iOS 13.0 or later</li>
+                            <li><strong>Android:</strong> Coming soon!</li>
+                        </ul>
+                        <p>The app is optimized for both phone and tablet screens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account & Privacy -->
+        <div class="category">
+            <h2>Account & Privacy</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my data safe and private?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Absolutely. We take your privacy seriously:</p>
+                        <ul>
+                            <li><strong>Local-first:</strong> All data is stored on your device by default</li>
+                            <li><strong>End-to-end sync:</strong> If you create an account, data is encrypted during sync</li>
+                            <li><strong>No tracking:</strong> We don't track your usage or sell your data</li>
+                            <li><strong>Minimal permissions:</strong> We only request permissions essential for app features</li>
+                        </ul>
+                        <p>Read our full <a href="privacy.html">Privacy Policy</a> for details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I clear my local data?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>You can selectively clear different types of data stored on your device:</p>
+                        <p><strong>To clear specific data:</strong></p>
+                        <ul>
+                            <li>Go to Settings > Data & Privacy</li>
+                            <li>Choose what to clear:
+                                <ul style="margin-top: 8px;">
+                                    <li><strong>Clear Likes</strong> - Removes all your liked wisdoms</li>
+                                    <li><strong>Clear History</strong> - Removes your browsing history</li>
+                                    <li><strong>Clear Collections</strong> - Deletes all saved collections and bookmarks</li>
+                                    <li><strong>Clear Journal Entries</strong> - Removes all journal reflections</li>
+                                    <li><strong>Clear Streak</strong> (Pro only) - Resets your streak progress to zero</li>
+                                    <li><strong>Clear All Data</strong> (Pro only) - Removes all likes, history, collections, journal entries, and streak progress</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p><strong>Note:</strong> Your preferences (accent, appearance) are preserved when clearing data. If you're signed in, your synced data remains in the cloud unless you delete your account. Clear Streak and Clear All Data are advanced features available exclusively to VietWise Pro users.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I delete my account?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>To permanently delete your account and all associated synced data:</p>
+                        <ul>
+                            <li>Go to Settings > Data & Privacy</li>
+                            <li>Tap "Delete Account" under Account Management</li>
+                            <li>If you're not signed in, you'll be prompted to sign in first</li>
+                            <li>Confirm deletion twice</li>
+                        </ul>
+                        <p><strong>Important:</strong> This action is permanent and cannot be undone. All your synced data, collections, and journal entries will be permanently deleted from our servers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use VietWise on multiple devices?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes! Create an account to sync your data across all your devices:</p>
+                        <ul>
+                            <li>Collections and saved wisdoms</li>
+                            <li>Journal entries</li>
+                            <li>Liked wisdoms</li>
+                            <li>History (Pro only)</li>
+                            <li>Settings and preferences</li>
+                        </ul>
+                        <p>Simply sign in with the same account on each device and your data will sync automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Still Have Questions? -->
+        <div class="contact-section">
+            <h2>Still have questions?</h2>
+            <p>We're here to help! Reach out to our support team.</p>
+            <p>
+                Email: <a href="mailto:support@vietwise.app">support@vietwise.app</a><br>
+                Response time: Within 24-48 hours
+            </p>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </p>
+            <p style="margin-top: 20px; color: #999;">
+                © 2024 VietWise. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isActive = this.classList.contains('active');
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.parentElement.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                // Toggle current FAQ
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Show/hide category headers
+            document.querySelectorAll('.category').forEach(category => {
+                const visibleItems = category.querySelectorAll('.faq-item[style="display: block"]').length;
+                if (visibleItems === 0 && searchTerm !== '') {
+                    category.style.display = 'none';
+                } else {
+                    category.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- Updated Mon 24 Nov 2025 11:58:09 AEDT -->
