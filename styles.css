@@ -8,8 +8,10 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #1a1a1a;
+    background-color: #fafafa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -20,9 +22,9 @@ body {
 
 /* Navigation */
 .nav {
-    background-color: #fff;
+    background-color: #f5f5f5;
     padding: 20px 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -39,8 +41,9 @@ body {
 
 .logo {
     font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
@@ -61,7 +64,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #fff;
+    background-color: #f5f5f5;
     padding: 80px 0;
 }
 
@@ -73,21 +76,24 @@ body {
 }
 
 .hero-subtitle {
-    background-color: #d4ebf2;
-    color: #333;
+    background-color: #e8f4f8;
+    color: #1a1a1a;
     padding: 8px 16px;
     border-radius: 20px;
     display: inline-block;
     font-size: 14px;
+    font-weight: 500;
     margin-bottom: 20px;
+    letter-spacing: 0.3px;
 }
 
 .hero-title {
     font-size: 64px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.1;
     margin-bottom: 20px;
     color: #000;
+    letter-spacing: -1.5px;
 }
 
 .highlight {
@@ -98,7 +104,8 @@ body {
     font-size: 18px;
     color: #666;
     margin-bottom: 40px;
-    line-height: 1.8;
+    line-height: 1.7;
+    font-weight: 400;
 }
 
 .hero-buttons {
@@ -108,32 +115,36 @@ body {
 
 .btn {
     padding: 16px 40px;
-    border-radius: 30px;
+    border-radius: 12px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: all 0.2s ease;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btn-primary {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:hover {
-    background-color: #000;
+    background-color: #1a1a1a;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #333;
-    border: 2px solid #333;
+    color: #000;
+    border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary:hover {
-    background-color: #333;
-    color: #fff;
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .hero-image {
@@ -141,11 +152,12 @@ body {
 }
 
 .phone-mockup {
-    background-color: #f9f9f9;
-    border-radius: 30px;
+    background-color: #fff;
+    border-radius: 24px;
     padding: 60px 40px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .qr-placeholder {
@@ -171,12 +183,13 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #7CB8D9;
+    background-color: #000;
     color: #fff;
     padding: 8px 20px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
 /* Features Section */
@@ -187,10 +200,11 @@ body {
 
 .section-title {
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     color: #000;
+    letter-spacing: -1px;
 }
 
 .section-subtitle {
@@ -198,6 +212,7 @@ body {
     color: #666;
     text-align: center;
     margin-bottom: 60px;
+    font-weight: 400;
 }
 
 .features-grid {
@@ -208,32 +223,47 @@ body {
 
 .feature-card {
     background-color: #f5f5f5;
-    padding: 40px;
-    border-radius: 20px;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
 }
 
 .feature-icon {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     background-color: #d4ebf2;
-    border-radius: 15px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
     margin-bottom: 20px;
-}
-
-.feature-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
     color: #000;
 }
 
+.feature-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #000;
+    letter-spacing: -0.3px;
+}
+
 .feature-card p {
-    font-size: 16px;
+    font-size: 15px;
     color: #666;
     line-height: 1.6;
+    font-weight: 400;
 }
 
 /* Download Section */
@@ -246,7 +276,7 @@ body {
 .download-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     margin: 40px 0 20px;
 }
 
@@ -254,27 +284,39 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    padding: 16px 40px;
-    border-radius: 15px;
+    padding: 14px 28px;
+    border-radius: 12px;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .store-button:hover {
-    background-color: #000;
+    background-color: #1a1a1a;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
-.store-icon {
-    font-size: 24px;
+.store-button svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.store-name {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
 }
 
 .download-note {
     color: #999;
     font-size: 14px;
+    font-weight: 400;
 }
 
 /* Pricing Section */
@@ -361,51 +403,58 @@ body {
 /* Footer */
 .footer {
     background-color: #fff;
-    padding: 60px 0 30px;
-    border-top: 1px solid #e0e0e0;
+    padding: 60px 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
+    align-items: flex-start;
+    margin-bottom: 50px;
 }
 
 .footer-left h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
     color: #000;
+    letter-spacing: -0.3px;
 }
 
 .footer-left p {
-    color: #666;
+    color: #999;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 .footer-right {
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 
 .footer-right a {
     text-decoration: none;
-    color: #666;
-    transition: color 0.3s;
+    color: #999;
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.2s ease;
 }
 
 .footer-right a:hover {
-    color: #333;
+    color: #000;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .footer-bottom p {
-    color: #999;
-    font-size: 14px;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 /* Responsive Design */
@@ -430,6 +479,13 @@ body {
         flex-direction: column;
         gap: 30px;
         text-align: center;
+        align-items: center;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 
     .nav-container {
