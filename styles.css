@@ -46,6 +46,17 @@ body {
     letter-spacing: -0.5px;
 }
 
+.nav-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
@@ -353,75 +364,168 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .pricing-card {
     background-color: #f5f5f5;
-    padding: 60px 40px;
-    border-radius: 30px;
+    padding: 40px 36px;
+    border-radius: 24px;
     position: relative;
+    transition: all 0.3s ease;
 }
 
-.pricing-card.premium {
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card-featured {
     background-color: #d4ebf2;
 }
 
-.badge-popular {
+.pricing-badge {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #333;
+    top: 24px;
+    right: 24px;
+    background-color: #000;
     color: #fff;
-    padding: 6px 16px;
-    border-radius: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.pricing-header {
+    margin-bottom: 32px;
 }
 
 .pricing-card h3 {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     color: #000;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
-.pricing-subtitle {
-    color: #999;
-    margin-bottom: 30px;
-    font-size: 16px;
+.pricing-price {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
 }
 
-.price {
-    margin-bottom: 40px;
-}
-
-.amount {
+.price-amount {
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 700;
     color: #000;
+    letter-spacing: -1px;
 }
 
-.period {
+.price-period {
     font-size: 18px;
     color: #666;
+    font-weight: 400;
 }
 
-.features-list {
-    list-style: none;
-    padding: 0;
+.pricing-description {
+    color: #666;
+    font-size: 15px;
+    font-weight: 400;
 }
 
-.features-list li {
-    padding: 12px 0;
-    font-size: 16px;
+.pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.pricing-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
     color: #333;
+    font-size: 15px;
+}
+
+.pricing-feature svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #000;
+}
+
+.pricing-feature-highlight {
+    color: #000;
+}
+
+.pricing-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pricing-btn-primary {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-btn-primary:hover {
+    background-color: #1a1a1a;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.pricing-btn-secondary {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.pricing-btn-secondary:hover {
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .pricing-note {
-    margin-top: 20px;
+    margin-top: 16px;
     color: #666;
-    font-size: 14px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.pricing-faq {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pricing-faq p {
+    color: #666;
+    font-size: 15px;
+}
+
+.pricing-faq a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.pricing-faq a:hover {
+    opacity: 0.7;
 }
 
 /* Footer */
@@ -517,6 +621,48 @@ body {
 
     .pricing-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pricing-card {
+        padding: 32px 24px;
+    }
+
+    .pricing-badge {
+        top: 16px;
+        right: 16px;
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .pricing-card h3 {
+        font-size: 28px;
+    }
+
+    .price-amount {
+        font-size: 40px;
+    }
+
+    .price-period {
+        font-size: 16px;
+    }
+
+    .pricing-feature {
+        font-size: 14px;
+    }
+
+    .pricing-btn {
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .pricing-faq {
+        margin-top: 32px;
+        padding-top: 32px;
+    }
+
+    .pricing-faq p {
+        font-size: 14px;
     }
 
     .phone-mockup {
