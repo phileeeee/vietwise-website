@@ -734,6 +734,11 @@ a.nav-link:hover {
         gap: 20px;
     }
 
+    /* Hide pricing link in nav on mobile - it's in footer */
+    a.nav-link {
+        display: none;
+    }
+
     .download-buttons {
         flex-direction: column;
         align-items: center;
