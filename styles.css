@@ -736,7 +736,7 @@ a.nav-link:hover {
 
     /* Hide pricing link in nav on mobile - it's in footer */
     a.nav-link {
-        display: none;
+        display: none !important;
     }
 
     .download-buttons {
