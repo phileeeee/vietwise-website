@@ -1107,62 +1107,70 @@ a.nav-link:hover {
         margin-bottom: 32px;
     }
 
+    /* Keep table format on mobile with optimized spacing */
     .comparison-header,
     .comparison-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 20px;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 8px;
+        padding: 12px 16px;
     }
 
     .comparison-header {
-        padding-bottom: 0;
+        padding: 16px;
+        font-size: 14px;
     }
 
     .comparison-feature-header {
-        display: none;
+        font-size: 12px;
     }
 
     .comparison-plan-header {
-        text-align: left;
-        padding: 12px 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.06);
-    }
-
-    .comparison-plan-header:first-of-type {
-        border-top: none;
+        font-size: 15px;
+        text-align: center;
     }
 
     .comparison-category {
-        padding: 16px 20px;
+        padding: 12px 16px;
     }
 
-    .comparison-row {
-        display: block;
+    .comparison-category h3 {
+        font-size: 14px;
     }
 
     .comparison-feature-name {
-        margin-bottom: 16px;
+        padding-right: 8px;
+    }
+
+    .comparison-feature-name strong {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .comparison-feature-desc {
+        font-size: 12px;
+        line-height: 1.4;
     }
 
     .comparison-feature-value {
-        justify-content: flex-start;
-        padding: 12px 0;
-        margin: 0 !important;
-        background-color: transparent !important;
+        justify-content: center;
+        align-items: center;
     }
 
-    .comparison-feature-value::before {
-        content: attr(data-plan);
-        font-size: 14px;
-        font-weight: 600;
-        color: #666;
-        min-width: 80px;
+    .comparison-feature-value svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .comparison-limit,
+    .comparison-highlight {
+        font-size: 13px;
     }
 
     .comparison-feature-value-featured {
         background-color: #f0f9fc !important;
-        margin: 0 -20px !important;
-        padding: 12px 20px !important;
+        margin: 0 -8px !important;
+        padding: 12px 8px !important;
     }
 
     .pricing-faq-section {
