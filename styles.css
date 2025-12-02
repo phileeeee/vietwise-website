@@ -1122,8 +1122,10 @@ a.nav-link:hover {
     .pricing-badge-compact {
         font-size: 10px;
         padding: 4px 10px;
-        top: 12px;
-        right: 12px;
+        top: 8px;
+        right: 8px;
+        transform: scale(0.6);
+        transform-origin: top right;
     }
 
     .comparison-section {
