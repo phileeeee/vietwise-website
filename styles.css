@@ -1090,12 +1090,40 @@ a.nav-link:hover {
     }
 
     .pricing-cards-row {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .pricing-card-compact {
-        padding: 28px 24px;
+        padding: 24px 16px;
+    }
+
+    .pricing-card-compact h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .price-amount-compact {
+        font-size: 32px;
+    }
+
+    .price-period-compact {
+        font-size: 14px;
+    }
+
+    .pricing-description-compact {
+        font-size: 13px;
+    }
+
+    .pricing-note-compact {
+        font-size: 11px;
+    }
+
+    .pricing-badge-compact {
+        font-size: 10px;
+        padding: 4px 10px;
+        top: 12px;
+        right: 12px;
     }
 
     .comparison-section {
