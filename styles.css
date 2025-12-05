@@ -993,6 +993,13 @@ a.nav-link:hover {
     font-weight: 600;
 }
 
+.comparison-footnote {
+    font-size: 13px;
+    color: #666;
+    margin-top: 16px;
+    text-align: center;
+}
+
 /* Pricing FAQ Section */
 .pricing-faq-section {
     padding: 80px 0;
