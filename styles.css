@@ -997,6 +997,7 @@ a.nav-link:hover {
     font-size: 11px;
     color: #999;
     margin-top: 24px;
+    padding-left: 32px;
     text-align: left;
 }
 
