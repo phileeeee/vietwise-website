@@ -994,10 +994,10 @@ a.nav-link:hover {
 }
 
 .comparison-footnote {
-    font-size: 13px;
-    color: #666;
-    margin-top: 16px;
-    text-align: center;
+    font-size: 11px;
+    color: #999;
+    margin-top: 24px;
+    text-align: left;
 }
 
 /* Pricing FAQ Section */
