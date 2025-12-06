@@ -102,7 +102,15 @@ a.nav-link:hover {
 }
 
 .hero-content {
-    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 550px;
 }
 
 .hero-subtitle {
@@ -180,13 +188,13 @@ a.nav-link:hover {
 /* Hero Download Box - QR + Store Badges */
 .hero-download-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 24px;
-    margin-top: 32px;
+    gap: 16px;
     background-color: #e8e6e1;
-    padding: 20px;
-    border-radius: 16px;
-    width: fit-content;
+    padding: 24px;
+    border-radius: 20px;
+    flex-shrink: 0;
 }
 
 .qr-code-container {
@@ -628,7 +636,13 @@ a.nav-link:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-content {
+        flex-direction: column;
         text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        max-width: 100%;
     }
 
     .hero-title {
@@ -695,47 +709,12 @@ a.nav-link:hover {
 
     /* Hero Download Box - Mobile */
     .hero-download-box {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .qr-code-container {
-        padding: 10px;
+        padding: 20px;
     }
 
     .qr-code-img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .store-badges {
-        flex-direction: row;
-        gap: 8px;
-    }
-
-    .store-badge {
-        padding: 8px 12px;
-        min-width: auto;
-    }
-
-    .store-badge svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .store-badge-label {
-        font-size: 8px;
-    }
-
-    .store-badge-name {
-        font-size: 14px;
-    }
-
-    .store-badge-soon {
-        font-size: 8px;
+        width: 100px;
+        height: 100px;
     }
 
     /* Download Section - Mobile */
