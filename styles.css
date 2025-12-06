@@ -227,6 +227,17 @@ a.nav-link:hover {
     font-weight: 500;
 }
 
+.qr-code-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+}
+
+.qr-placeholder a {
+    display: block;
+    margin-bottom: 16px;
+}
+
 .scan-text {
     font-size: 16px;
     font-weight: 600;
