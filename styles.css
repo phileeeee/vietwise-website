@@ -717,6 +717,16 @@ a.nav-link:hover {
         height: 100px;
     }
 
+    .store-badges {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .store-badge {
+        justify-content: center;
+        width: 100%;
+    }
+
     /* Download Section - Mobile */
     .download-qr-box {
         flex-direction: column;
