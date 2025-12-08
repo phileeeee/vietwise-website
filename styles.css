@@ -221,7 +221,7 @@ a.nav-link:hover {
 .curved-arrow {
     color: #666;
     margin-top: 4px;
-    align-self: flex-end;
+    transform: translateX(20px);
 }
 
 .qr-code-container {
