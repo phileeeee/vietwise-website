@@ -417,10 +417,17 @@ a.nav-link:hover {
     margin: 0 auto;
 }
 
-.pricing-card-link {
+.pricing-card-link,
+.pricing-card-link:hover,
+.pricing-card-link:visited,
+.pricing-card-link:active {
     text-decoration: none;
     color: inherit;
     display: block;
+}
+
+.pricing-card-link * {
+    text-decoration: none;
 }
 
 .pricing-card {
