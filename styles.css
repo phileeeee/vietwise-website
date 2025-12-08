@@ -424,10 +424,15 @@ a.nav-link:hover {
     text-decoration: none;
     color: inherit;
     display: block;
+    height: 100%;
 }
 
 .pricing-card-link * {
     text-decoration: none;
+}
+
+.pricing-card-link .pricing-card {
+    height: 100%;
 }
 
 .pricing-card {
