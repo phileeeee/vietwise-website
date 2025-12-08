@@ -417,6 +417,12 @@ a.nav-link:hover {
     margin: 0 auto;
 }
 
+.pricing-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .pricing-card {
     background-color: #f5f5f5;
     padding: 28px 24px;
