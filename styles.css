@@ -387,15 +387,15 @@ a.nav-link:hover {
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1000px;
+    gap: 28px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .pricing-card {
     background-color: #f5f5f5;
-    padding: 40px 36px;
-    border-radius: 24px;
+    padding: 28px 24px;
+    border-radius: 20px;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -411,68 +411,68 @@ a.nav-link:hover {
 
 .pricing-badge {
     position: absolute;
-    top: 24px;
-    right: 24px;
+    top: 18px;
+    right: 18px;
     background-color: #000;
     color: #fff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.3px;
 }
 
 .pricing-header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .pricing-card h3 {
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 26px;
+    margin-bottom: 12px;
     color: #000;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
 
 .pricing-price {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     display: flex;
     align-items: baseline;
     gap: 4px;
 }
 
 .price-amount {
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 700;
     color: #000;
     letter-spacing: -1px;
 }
 
 .price-period {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     font-weight: 400;
 }
 
 .pricing-description {
     color: #666;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
 }
 
 .pricing-features {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 32px;
+    gap: 10px;
+    margin-bottom: 24px;
 }
 
 .pricing-feature {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
     color: #333;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .pricing-feature svg {
@@ -1254,5 +1254,42 @@ a.nav-link:hover {
 
     .pricing-cta p {
         font-size: 16px;
+    }
+}
+
+/* Instagram Section */
+.instagram-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.instagram-widget {
+    margin-top: 40px;
+}
+
+/* App Preview Section - Desktop Only */
+.app-preview {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.app-preview .container {
+    text-align: center;
+}
+
+.app-preview-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* Hide on mobile, show only on desktop */
+.desktop-only {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
     }
 }
