@@ -1263,6 +1263,16 @@ a.nav-link:hover {
     background-color: #fff;
 }
 
+.instagram-section .section-subtitle a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.instagram-section .section-subtitle a:hover {
+    color: #000;
+}
+
 .instagram-widget {
     margin-top: 40px;
 }
@@ -1278,7 +1288,7 @@ a.nav-link:hover {
 }
 
 .app-preview-image {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     height: auto;
     border-radius: 16px;
