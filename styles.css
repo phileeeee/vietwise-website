@@ -186,6 +186,12 @@ a.nav-link:hover {
 }
 
 /* Hero Download Box - QR + Store Badges */
+.hero-download-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .hero-download-box {
     display: flex;
     flex-direction: row !important;
@@ -198,20 +204,23 @@ a.nav-link:hover {
 }
 
 .qr-scan-hint {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     color: #666;
-    font-size: 15px;
+    font-size: 14px;
     font-style: italic;
     line-height: 1.4;
 }
 
 .qr-scan-hint p {
-    margin: 0 0 4px 0;
+    margin: 0;
+    text-align: right;
 }
 
 .curved-arrow {
     color: #666;
-    margin-left: auto;
+    margin-top: 4px;
 }
 
 .qr-code-container {
