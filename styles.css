@@ -197,6 +197,23 @@ a.nav-link:hover {
     flex-shrink: 0;
 }
 
+.qr-scan-hint {
+    text-align: right;
+    color: #666;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.qr-scan-hint p {
+    margin: 0 0 4px 0;
+}
+
+.curved-arrow {
+    color: #666;
+    margin-left: auto;
+}
+
 .qr-code-container {
     background-color: #fff;
     padding: 12px;
