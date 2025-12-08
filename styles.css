@@ -1141,6 +1141,10 @@ a.nav-link:hover {
     margin-bottom: 32px;
 }
 
+.cta-download-wrapper {
+    justify-content: center;
+}
+
 /* Responsive Pricing Page */
 @media (max-width: 768px) {
     .pricing-hero {
