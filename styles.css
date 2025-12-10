@@ -1381,19 +1381,19 @@ a.nav-link:hover {
 
 /* Hide on mobile, show only on desktop */
 .desktop-only {
-    display: block;
+    display: block !important;
 }
 
 /* Hide on desktop, show only on mobile */
 .mobile-only {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 768px) {
     .desktop-only {
-        display: none;
+        display: none !important;
     }
     .mobile-only {
-        display: block;
+        display: block !important;
     }
 }
