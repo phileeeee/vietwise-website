@@ -678,6 +678,21 @@ a.nav-link:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Reduce section padding on mobile */
+    .hero {
+        padding: 50px 0;
+    }
+    .features,
+    .pricing,
+    .download,
+    .app-preview,
+    .instagram-section {
+        padding: 50px 0;
+    }
+    .footer {
+        padding: 40px 0 30px;
+    }
+
     .hero-content {
         flex-direction: column;
         text-align: center;
