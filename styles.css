@@ -1351,16 +1351,6 @@ a.nav-link:hover {
     flex-shrink: 0;
 }
 
-.instagram-widget {
-    margin-top: 40px;
-}
-
-/* Fix LightWidget hover zoom keeping rounded corners */
-.instagram-widget .lightwidget__tile,
-.instagram-widget .lightwidget__image {
-    border-radius: 12px;
-    overflow: hidden;
-}
 
 /* App Preview Section - Desktop Only */
 .app-preview {
